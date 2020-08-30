@@ -1,0 +1,19 @@
+.sidebarChat__container{
+    display: flex;
+    align-items: center;
+    margin: 10px 30px;
+}
+.sidebarChat{
+    padding: 5px;
+    border-bottom: 1px solid #efefef;
+    cursor: pointer;
+}
+.sidebarChat:hover{
+    background: lightgray;
+}
+.sidebarChat__container .MuiAvatar-root{
+    margin-right: 20px !important;
+}
+.username{
+    font-weight: 600;
+}

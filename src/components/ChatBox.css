@@ -1,0 +1,105 @@
+.chatBox{
+    flex: 0.7;
+    display: flex;
+    flex-direction: column;
+}
+.chatBox__header{
+    border-bottom: 1px solid #d6d6d6;
+}
+.chatBox__header__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 20px;
+}
+.chatBox__headerLeft{
+    display:flex;
+    align-items: center;
+}
+.chatBox__headerLeft > .MuiAvatar-root{
+    margin-right: 20px !important;
+}
+.seen__details{
+    color: gray;
+    font-size: 14px;
+}
+
+.chatBox__body{
+    flex:1;
+    background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+    background-repeat: repeat;
+    background-position: center;
+    padding: 30px;
+    overflow-y:scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.chatBox__body::-webkit-scrollbar{
+    display:none
+}
+
+.chatBox__message {
+    position: relative;
+    width: fit-content;
+    font-size: 16px;
+    background: #fff;
+    padding: 8px;
+    margin-bottom: 35px;
+    border-radius: 11px;
+}
+.chatBox__name{
+    position: absolute;
+    top: -20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.chatBox__timestamp{
+    margin-left: 30px;
+    font-size: 12px;
+}
+
+.chatBox__receive{
+    margin-left: auto;
+    background-color: #dcf8c6;
+}
+
+.chatBox__footer{
+    border-top: 1px solid #d6d6d6;
+}
+.chatBox__footer__container{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px 20px;
+}
+.chatBox__footer__container form{
+    flex: 1;
+    display:flex;
+    background:white;
+    border-radius: 30px;
+    padding: 8px 10px;
+}
+.chatBox__footer__container form > input{
+    background:transparent;
+    font-size: 17px;
+    flex: 1;
+    border-radius: 10px;
+    border:none;
+    
+}
+.chatBox__footer__container form > input:focus{
+    outline:none;
+}
+.chatBox__footer__container form > button{
+    background: transparent;
+    border:none;
+    font-size: 18px;
+    cursor: pointer;
+}
+.chatBox__footer__container form > button:focus{
+    outline:none;
+}
+.send{
+    color: #006d77 !important;
+    cursor: pointer !important;
+}
