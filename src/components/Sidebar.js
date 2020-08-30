@@ -14,6 +14,7 @@ const Sidebar = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [rooms, setRooms] = useState();
   const [filterRoom, setFilterRoom] = useState();
+  const [searchRoom, setSearchRoom] = useState("");
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -30,11 +31,26 @@ const Sidebar = () => {
       setRooms(snapshot.docs.map((doc) => ({ id: doc.id, room: doc.data() })));
     });
 
-    const filteredRooms = rooms?.filter(
-      ({ id, room }) => room.email !== auth.user.email
-    );
-    setFilterRoom(filteredRooms);
-  }, [auth.user.email, rooms]);
+    if(searchRoom){
+      const filteredRooms = rooms?.filter(
+        ({ id, room }) => room.email !== auth.user.email
+      );
+      setFilterRoom(filteredRooms);
+
+      const searchedRoom = filteredRooms?.filter(({id, room}) => (room.name).toLowerCase().includes( searchRoom.toLowerCase() ))
+      setFilterRoom(searchedRoom);
+    }else{
+      const filteredRooms = rooms?.filter(
+        ({ id, room }) => room.email !== auth.user.email
+      );
+      setFilterRoom(filteredRooms);
+    }
+
+
+    
+  }, [searchRoom, auth.user.email, rooms]);
+
+  
 
   return (
     <div className="sidebar">
@@ -70,7 +86,7 @@ const Sidebar = () => {
       <div className="sidebar__search__container">
         <div className="sidebar__search">
           <SearchIcon className="sidebar__searchButton" />
-          <input type="text" placeholder="Search people" />
+          <input type="text" value={searchRoom} onChange={e => setSearchRoom(e.target.value)} placeholder="Search people" />
         </div>
       </div>
       <div className="sidebar__chat">
