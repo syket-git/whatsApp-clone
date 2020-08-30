@@ -80,7 +80,10 @@ const Sidebar = () => {
           open={Boolean(anchorEl)}
           onClose={handleClose}
         >
+          <MenuItem>Name: {auth.user.displayName}</MenuItem>
+          <MenuItem>Email: {auth.user.email}</MenuItem>
           <MenuItem onClick={() => auth.signOut()}>Logout</MenuItem>
+          
         </Menu>
       </div>
       <div className="sidebar__search__container">
