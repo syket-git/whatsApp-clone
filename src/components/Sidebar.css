@@ -91,7 +91,7 @@
     }
 }
 
-@media all and (max-width: 980px){
+@media all and (max-width: 484px){
     .responsive__sidebar{
         padding-right: 8px;
         padding-left: 8px;

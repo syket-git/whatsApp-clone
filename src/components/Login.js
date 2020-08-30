@@ -1,5 +1,5 @@
 import React from 'react';
-import './Signup.css';
+import './Login.css';
 import { useForm } from 'react-hook-form';
 import { Button } from '@material-ui/core';
 import { useAuth } from './useAuth';
@@ -19,7 +19,7 @@ const Login = () => {
   };
   auth.user?.displayName !== undefined && toast('Signup successful!');
   return (
-    <div className="signup">
+    <div className="signup login">
       <ToastContainer />
       <img
         src="https://www.messengerpeople.com/wp-content/uploads/2019/01/icon-400-messenger-whatsapp-whatsgreen3x-300x300.png"
@@ -33,7 +33,6 @@ const Login = () => {
       </div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
-          style={{ width: '100%' }}
           name="email"
           type="email"
           placeholder="Email"
@@ -46,7 +45,6 @@ const Login = () => {
         <br />
 
         <input
-          style={{ width: '100%' }}
           name="password"
           type="password"
           placeholder="Password"

@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Signup from './components/Signup';
 import Login from './components/Login';
 import Logout from './components/Logout';
+import Text from './components/Text';
 
 function App() {
   return (
@@ -25,9 +26,10 @@ function App() {
               <AuthenticatedUser path="/login">
                 <Login />
               </AuthenticatedUser>
-              AuthenticatedUser
+              
               <PrivateRoute path="/app">
                 <Sidebar />
+                <Text />
               </PrivateRoute>
               <PrivateRoute path="/chat/:roomId">
                 <Sidebar />
