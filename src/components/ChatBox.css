@@ -103,3 +103,59 @@
     color: #006d77 !important;
     cursor: pointer !important;
 }
+@media all and (max-width: 980px){
+    .chatBox{
+        flex: 0.9;
+    }
+    .chatBox__headerRight{
+        display:none;
+    }
+}
+@media all and (max-width: 484px){
+    .chatBox{
+        overflow:hidden;
+    }
+    .footer__icon{
+        display: none !important;
+    }
+    .chatBox__footer__container form{
+        width: 60vw;
+    }
+    .chatBox__headerLeft > .MuiAvatar-root{
+        margin-right: 8px !important;
+    }
+    .chatBox__header__container{
+        margin: 10px 4px;
+    }
+    .chatBox__headerLeft__info > p{
+        font-size: 12px !important;
+    }
+    .chatBox__message {
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .chatBox__timestamp {
+        margin-left: 0;
+        font-size: 10px;
+    }
+    .chatBox__footer__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 8px 11px;
+    }
+    .chatBox__footer__container form > input{
+        overflow:hidden;
+        
+    }
+    .chatBox__body{
+        
+        padding-top: 25px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 25px;
+    }
+    
+}

@@ -17,3 +17,16 @@
 .username{
     font-weight: 600;
 }
+.responsive__sidebarChat{
+    display:none;
+}
+
+@media all and (max-width: 980px){
+    .sidebarChat{
+        display:none;
+    }
+    .responsive__sidebarChat{
+        display:block;
+        margin-bottom: 15px;
+    }
+}

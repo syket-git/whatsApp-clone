@@ -117,7 +117,7 @@ const ChatBox = () => {
       <div className="chatBox__footer">
         <div className="chatBox__footer__container">
           <IconButton>
-            <InsertEmoticonIcon />
+            <InsertEmoticonIcon className="footer__icon" />
           </IconButton>
           <form>
             <input
@@ -135,7 +135,7 @@ const ChatBox = () => {
             </button>
           </form>
           <IconButton>
-            <KeyboardVoiceIcon />
+            <KeyboardVoiceIcon className="footer__icon" />
           </IconButton>
         </div>
       </div>
